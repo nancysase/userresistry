@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TaskListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,6 +18,16 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.isLogin() == true{
+            print("\(Auth.auth().currentUser?.uid)")
+            print("\(Auth.auth().currentUser?.email)")
+        } else {
+            self.presentLoginViewController()
+        }
+        
+        //ログインビューの表示
+        self.presentLoginViewController()
         
         // tableViewのお約束その１。この ViewController で delegate のメソッドを使うために記述している。
         tableView.delegate = self
@@ -31,6 +42,22 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         
         setupNavigationBar()
     }
+    
+    func presentLoginViewController(){
+        let loginVC = LoginViewController()
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: false, completion: nil)
+        
+    }
+    
+    func isLogin() -> Bool{
+        if Auth.auth().currentUser != nil{
+            return true
+        } else {
+            return false
+        }
+    }
+    
 
     #warning("画面描画のたびにtableViewを更新")
     // 画面描画のたびにtableViewを更新
@@ -49,6 +76,17 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupNavigationBar() {
         let rightButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showAddScreen))
         navigationItem.rightBarButtonItem = rightButtonItem
+        let leftBbuttonItem = UIBarButtonItem(title: "ログアウト", style: .done, target: self, action: #selector(logout))
+        navigationItem.leftBarButtonItem = leftBbuttonItem
+    }
+    
+    @objc func logout(){
+        do {
+            try Auth.auth().signOut()
+            self.presentLoginViewController()
+        } catch let singOutError as NSError{
+            print("サインアウトエラー：\(singOutError)")
+        }
     }
 
     #warning("navigation barのボタンをタップしたときの動作")

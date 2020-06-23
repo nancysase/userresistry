@@ -19,6 +19,10 @@
 		67E03FAD23CEC8DD00B8220F /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E03FAB23CEC8DD00B8220F /* AddViewController.xib */; };
 		67E03FB223CEFB6B00B8220F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E03FB123CEFB6B00B8220F /* Task.swift */; };
 		B919ADBC249DAEA000FA2559 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B919ADBB249DAEA000FA2559 /* GoogleService-Info.plist */; };
+		B919ADBF249DB75F00FA2559 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B919ADBD249DB75F00FA2559 /* LoginViewController.swift */; };
+		B919ADC0249DB75F00FA2559 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B919ADBE249DB75F00FA2559 /* LoginViewController.xib */; };
+		B919ADC3249DD47200FA2559 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B919ADC1249DD47200FA2559 /* TermsViewController.swift */; };
+		B919ADC4249DD47200FA2559 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B919ADC2249DD47200FA2559 /* TermsViewController.xib */; };
 		C582572E2493C42600894CC9 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C582572C2493C42600894CC9 /* TaskDetailViewController.swift */; };
 		C582572F2493C42600894CC9 /* TaskDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C582572D2493C42600894CC9 /* TaskDetailViewController.xib */; };
 		C5954A332462D6FC00B008D3 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5954A322462D6FC00B008D3 /* UserDefaultsRepository.swift */; };
@@ -41,6 +45,10 @@
 		67E03FAB23CEC8DD00B8220F /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		67E03FB123CEFB6B00B8220F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B919ADBB249DAEA000FA2559 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B919ADBD249DB75F00FA2559 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B919ADBE249DB75F00FA2559 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B919ADC1249DD47200FA2559 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		B919ADC2249DD47200FA2559 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		B9AB653721F34E9BC81317D6 /* Pods_GsTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GsTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C582572C2493C42600894CC9 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		C582572D2493C42600894CC9 /* TaskDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDetailViewController.xib; sourceTree = "<group>"; };
@@ -120,6 +128,10 @@
 			children = (
 				67E03F9623CEC75400B8220F /* AppDelegate.swift */,
 				67E03F9823CEC75400B8220F /* SceneDelegate.swift */,
+				B919ADBD249DB75F00FA2559 /* LoginViewController.swift */,
+				B919ADBE249DB75F00FA2559 /* LoginViewController.xib */,
+				B919ADC1249DD47200FA2559 /* TermsViewController.swift */,
+				B919ADC2249DD47200FA2559 /* TermsViewController.xib */,
 				C5954A312462D68200B008D3 /* Repositories */,
 				678EAB9023CF034E00FE4177 /* Models */,
 				675B63BD23CF040F00F9A5AC /* TaskListViewController */,
@@ -218,6 +230,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B919ADC0249DB75F00FA2559 /* LoginViewController.xib in Resources */,
+				B919ADC4249DD47200FA2559 /* TermsViewController.xib in Resources */,
 				67166CA323D0419F008EF0CA /* CustomCell.xib in Resources */,
 				67E03FA323CEC75700B8220F /* LaunchScreen.storyboard in Resources */,
 				C582572F2493C42600894CC9 /* TaskDetailViewController.xib in Resources */,
@@ -277,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B919ADBF249DB75F00FA2559 /* LoginViewController.swift in Sources */,
 				67E03F9B23CEC75400B8220F /* TaskListViewController.swift in Sources */,
 				67E03F9723CEC75400B8220F /* AppDelegate.swift in Sources */,
 				67E03FB223CEFB6B00B8220F /* Task.swift in Sources */,
+				B919ADC3249DD47200FA2559 /* TermsViewController.swift in Sources */,
 				67E03FAC23CEC8DD00B8220F /* AddViewController.swift in Sources */,
 				C5954A332462D6FC00B008D3 /* UserDefaultsRepository.swift in Sources */,
 				67166CA223D0419F008EF0CA /* CustomCell.swift in Sources */,
